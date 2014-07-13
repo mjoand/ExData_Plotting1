@@ -15,5 +15,6 @@ data1<-read.table(file1,sep=";",na.strings="?",skip=66637,nrows=2880)
 #The required height and widthe of 480x 480 pixels are already defined by default
 # background was redefined as transparent
 png(file = "plot1.png",bg="transparent")
+#The column corresponding to the variable Global Active Power is the 3rd column
 hist(data[,3],main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red",bg="transparent")
 dev.off()
