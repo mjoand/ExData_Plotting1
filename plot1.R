@@ -1,4 +1,4 @@
-## Downloading data from the course repo and reading it into a data table
+### Downloading data from the course repo and reading it into a data table
 url1<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(url1, destfile="household_power_consumption.zip")
 unzip("household_power_consumption.zip")
@@ -16,5 +16,5 @@ data1<-read.table(file1,sep=";",na.strings="?",skip=66637,nrows=2880)
 # background was redefined as transparent
 png(file = "plot1.png",bg="transparent")
 #The column corresponding to the variable Global Active Power is the 3rd column
-hist(data[,3],main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red",bg="transparent")
+hist(data1[,3],main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red",bg="transparent")
 dev.off()

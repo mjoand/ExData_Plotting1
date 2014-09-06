@@ -39,6 +39,6 @@ lines(data4$Sub_metering_3 ~ data4$datetime, col="blue")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),lty="solid",col=c("black", "red", "blue"))
          
  #4th plot 
- plot(data4$Global_reactive_power ~data4$datetime,type='l',xlab="datetime",ylab="Global reactive power", bg="transparent") 
+ plot(data4$Global_reactive_power ~data4$datetime,type='l',xlab="datetime",ylab="Global_reactive_power", bg="transparent") 
 
 dev.off()
