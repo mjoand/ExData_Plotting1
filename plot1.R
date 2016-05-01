@@ -1,4 +1,5 @@
 ### Downloading data from the course repo and reading it into a data table
+####
 url1<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(url1, destfile="household_power_consumption.zip")
 unzip("household_power_consumption.zip")
