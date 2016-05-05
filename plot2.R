@@ -13,16 +13,16 @@ day1<-subset(data,Date=="1/2/2007")
 #Extracting the lines correponding to 2007-02-02
 day2<-subset(data,Date=="2/2/2007")
 
-data2<-rbind(day1,day2)
+data<-rbind(day1,day2)
 
 # creating a new column datetime by collapsing Date and Time
 # and converting it in a Date object
-data2$datetime <- apply(data2[ ,c("Date","Time")],1 ,paste ,collapse = " " )
-data2$datetime <- as.POSIXct(strptime(data2$datetime, "%d/%m/%Y %H:%M:%S"))
+data$datetime <- apply(data[ ,c("Date","Time")],1 ,paste ,collapse = " " )
+data$datetime <- as.POSIXct(strptime(data$datetime, "%d/%m/%Y %H:%M:%S"))
 
 ## Generating, annotating and saving plot2
 
 # background was redefined as transparent
 png(file = "plot2.png",bg="transparent",width=480, height=480, units="px")
-plot(data2$Global_active_power~ data2$datetime,type='l',xlab="",ylab="Global Active Power (kilowatts)",bg="transparent")
+plot(data$Global_active_power~ data$datetime,type='l',xlab="",ylab="Global Active Power (kilowatts)",bg="transparent")
 dev.off()
