@@ -13,7 +13,7 @@ Note that the location of the data on the course web site may not be permanent, 
 in future runs of the code, it may be necessary to replace the url for the one corresponding to
 the location of the data at the time.
 
-The plots were executed under a Windows software, Windows 7 and R version 3.1.0
+The plots were executed under a Windows software, Windows 10 and R version 3.2.0
 
 
 
